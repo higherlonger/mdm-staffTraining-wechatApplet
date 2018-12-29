@@ -1,0 +1,3 @@
+<view class="section tc" style='width:100%'>
+  <video id="myVideo" style='width:100%' src="{{url}}" controls autoplay bindtimeupdate="bindtimeupdate" initial-time="{{process}}"></video>
+</view>

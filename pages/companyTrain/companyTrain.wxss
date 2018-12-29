@@ -1,0 +1,50 @@
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  padding: 0 20rpx;
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+}
+.green{
+  color: #09bb07;
+  font-weight: bold;
+}
+.red{
+  color: #e64340;
+}
+.rightLine{
+  border-right:1px solid #b2b2b2;
+}
+.card{
+  background-color: white;
+  width: 100%;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.card .row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card .title{
+  margin-bottom: 20rpx;
+  font-size: 40rpx;
+  display: flex;
+}
+.card .title icon{
+  position: absolute;
+  right:40rpx;
+}
+.card .content .col{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36rpx;
+}

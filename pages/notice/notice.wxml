@@ -1,0 +1,27 @@
+<!--pages/notice/notice.wxml-->
+<!-- 内容列表 start  -->
+ 
+<view class='flex-list font_16'>
+  <text class="none {{isContent? 'show':'notshow'}}">暂无消息~</text>
+  
+  <block wx:for="{{list}}">
+    <view class="flex-item bc_white">
+      <view class='item-left border_rgt font_center'>
+        <text class='margin-top-10'>状态</text>
+        <text class='font_18 font_yellow margin-btm-10' wx:if="{{item.status==1}}">{{item.status_text}}</text>
+        <text class='font_18 font_red margin-btm-10' wx:if="{{item.status==2}}">{{item.status_text}}</text>
+        <text class='font_18 font_green margin-btm-10' wx:if="{{item.status==3}}">{{item.status_text}}</text>
+        <text class='font_18 font_red margin-btm-10' wx:if="{{item.status==4}}">{{item.status_text}}</text>
+        <text class='font_18 font_yellow margin-btm-10' wx:if="{{item.status==5}}">{{item.status_text}}</text>
+      </view>
+      <view class='item-right padding-lft-10'>
+        <text>考核岗位：{{item.job}}</text>
+        <text>考核时间：{{item.time}}</text>
+        <text wx:if="{{item.status==2}}">拒绝理由：{{item.address}}</text>
+        <text wx:else>考核地点：{{item.address}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>
+<!-- 内容列表 end  -->

@@ -1,0 +1,115 @@
+/* pages/productDetail/productDetail.wxss */
+@import "../../icon.wxss";
+/* 通用样式 start */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  font-family: "微软雅黑";
+}
+.disp_flex {
+  display: flex;
+}
+.bc_white {
+  background: #ffffff;
+}
+.bc_red {
+  background: #EE5C42;
+}
+.bc_yellow {
+  background: #FCA12C;
+}
+.bc_blue {
+  background: #4DB8F1;
+}
+.margin-top-5{
+  margin-top: 10rpx;
+}
+.margin-top-10{
+  margin-top: 20rpx;
+}
+.margin-btm-10{
+  margin-bottom: 20rpx;
+}
+.margin-rgt-10{
+  margin-right: 20rpx;
+}
+.margin-lft-10{
+  margin-left: 20rpx;
+}
+.font_white {
+  color: white;
+}
+.font_28 {
+  font-size: 56rpx;
+}
+.font_24 {
+  font-size: 48rpx;
+}
+.font_18 {
+  font-size: 36rpx;
+}
+.font_16 {
+  font-size: 32rpx;
+}
+.font_red {
+  color: #E64340;
+}
+.font_green {
+  color: #09BB07;
+}
+/* 通用样式 end */
+
+/* 内容列表 start */
+.flex-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.flex-list .flex-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  padding: 10px;
+  width:100%; 
+  border-radius: 20rpx 20rpx 0 0;
+  box-sizing: border-box;
+}
+.flex-list .flex-item .flex-c1{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-bofang {
+  color: #08b7f5;
+  font-size: 72rpx;
+}
+.icon-wendangicon {
+  color: #ff9e00;
+  font-size: 72rpx;
+}
+.btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  background: #E64340;
+  height: 88rpx;
+  color: white;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 内容列表 start */
+.show{
+  display: block;
+}
+.notshow{
+  display: none;
+}

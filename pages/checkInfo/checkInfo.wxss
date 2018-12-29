@@ -1,0 +1,39 @@
+page{
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  box-sizing: border-box;
+  justify-content: center; 
+  align-items: center;
+}
+.frame{
+  width: 100%;
+}
+.check{
+  margin-top:100rpx;
+}
+.check input{
+  border:1px solid #CCC;
+  padding: 10rpx;
+  border-radius:20rpx;
+  margin-top: 20rpx;
+}
+.ok{
+  width: 100%;
+  background-color: #e64340;
+  color: white;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  margin-top: 150rpx;
+}
+.logo{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 50%;
+}
+.pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

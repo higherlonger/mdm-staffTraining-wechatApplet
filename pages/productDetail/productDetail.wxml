@@ -1,0 +1,39 @@
+<!--pages/productDetail/productDetail.wxml-->
+<!-- 内容列表 start  -->
+<view class='flex-list'>
+
+  <block wx:for="{{detail.video}}" wx:for-item="item">
+    <view class="flex-item bc_white" data-type="{{ret.type}}" data-index="{{index}}" catchtap='open' data-id="{{item.id}}" data-url="{{item.url}}" data-pro="{{ret.videoTime}}" data-tit="{{item.title}}" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id}}" wx:for-index="ind">
+      <icon class="margin-top-5 iconfont icon-bofang" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.type==0}}"></icon>
+      <icon class="margin-top-5 iconfont icon-wendangicon" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.type==1}}"></icon>
+      <view class='flex-c1 margin-lft-10'>
+        <text class='font_18' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id}}">{{item.title}}</text>
+        <text class='font_16 font_red' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==0}}">未看</text>
+        <text class='font_16 font_green' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==1&&ret.type==0}}">已看{{ret.process}}%</text>
+        <text class='font_16 font_green' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==1&&ret.type==1}}">已看</text>
+      </view>
+      <icon type='success' size="20" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&(ret.type==0&&ret.process==100.0||ret.status==1&&ret.type==1)}}"></icon>
+      <icon type='warn' size="20" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&(ret.type==0&&ret.process!=100.0||ret.status!=1&&ret.type==1)}}"></icon>    
+    </view>
+  </block>
+
+  <block wx:for="{{detail.file}}" wx:for-item="item" wx:for-index="index">
+    <view class="flex-item bc_white" data-type="{{ret.type}}" data-index="{{index}}" catchtap='open' data-id="{{item.id}}" data-url="{{item.url}}" data-pro="{{ret.videoTime}}" data-tit="{{item.title}}" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id}}" wx:for-index="ind">
+      <icon class="margin-top-5 iconfont icon-bofang" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.type==0}}"></icon>
+      <icon class="margin-top-5 iconfont icon-wendangicon" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.type==1}}"></icon>
+      <view class='flex-c1 margin-lft-10'>
+        <text class='font_18' wx:for="{{value}}" wx:for-item="ret" wx:for-index="ind" wx:if="{{ret.id==item.id}}">{{item.title}}</text>
+        <text class='font_16 font_red' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==0}}">未看</text>
+        <text class='font_16 font_green' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==1&&ret.type==0}}">已看{{value.process}}%</text>
+        <text class='font_16 font_green' wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&ret.status==1&&ret.type==1}}">已看</text>
+      </view>
+      <icon type='success' size="20" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&(ret.type==0&&ret.process==100.0||ret.status==1&&ret.type==1)}}"></icon>
+      <icon type='warn' size="20" wx:for="{{value}}" wx:for-item="ret" wx:if="{{ret.id==item.id&&(ret.type==0&&ret.process!=100.0||ret.status!=1&&ret.type==1)}}"></icon>
+    </view>
+    <progress percent="{{percent}}" stroke-width="3" active class="{{index===id? 'show':'notshow'}}"/>
+  </block>
+ 
+</view>
+
+<view class="btn font_white" bindtap='applyTest'>申请考核</view>
+<!-- 内容列表 end  -->

@@ -1,0 +1,16 @@
+<!-- <navigator url="../index/index" hover-class="none">
+<view style='margin-top:100rpx;'>
+  验证
+</view>
+</navigator>  -->
+<view class="frame">
+  <view class='pic'>
+    <image src="../logo.png" class="logo" ></image>
+  </view>
+  <view class="check">
+    <text>请输入手机号：</text>
+    <input type='number' bindinput ="phone"></input>
+  </view>
+
+  <button class="ok" bindtap='login'>确定</button>
+</view>

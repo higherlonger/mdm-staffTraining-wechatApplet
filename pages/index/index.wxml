@@ -1,0 +1,20 @@
+<!--pages/trainList/trainList.wxml-->
+<!-- 内容列表 start  -->
+<block wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+  <view class="flex-item {{colorAry[index]}} font_white" bindtap="toList" hover-class="none"  data-id="{{item.id}}" data-title="{{item.name}}">
+    <text class='font_28'>{{item.name}}</text>
+    <view class='detail'>
+      <text class='font_24'> {{item.sum}} 个</text>
+      <text class='iconfont icon-youjiantou1 img'></text>
+    </view>
+  </view>
+</block>
+
+<view class="upload" catchtap='toNotice'>
+  <view class='rela'>
+    <text class='iconfont icon-xiaoxi icon' catchtap='toNotice'></text>
+    <view class='abso'>{{Number}}</view>
+  </view>
+</view>
+
+<!-- 内容列表 end  -->

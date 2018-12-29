@@ -1,0 +1,66 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/* 颜色 */
+.jv{
+  background-color: #EE5C42;
+}
+.huang{
+  background-color: #FCA12C;
+}
+.lan{
+  background-color: #4DB8F1;
+}
+.purple{
+  background-color: #B968C7;
+}
+.green{
+  background-color: #52A947;
+}
+.CornflowerBlue{
+  background-color: #6495ED
+}
+.Goldenrod1{
+  background-color: #FFC125;
+}
+.Violet{
+  background-color: #EE82EE;
+}
+.Seashell4{
+  background-color: #8B8682;
+}
+.Red3{
+  background-color: #CD0000;
+}
+.SkyBlue2{
+  background-color: #7EC0EE;
+}
+.PaleGreen{
+  background-color: #98FB98;
+}
+.NavajoWhite{
+  background-color: #FFDEAD;
+}
+.SeaGreen2{
+  background-color: #4EEE94;
+}
+.MediumSlateBlue{
+  background-color: #7B68EE;
+}
+.goldenrod{
+  background-color: #DAA520;
+}
+.RosyBrown1{
+  background-color: #FFC1C1;
+}
+
+.Violet{
+  background-color: #EE82EE;
+}

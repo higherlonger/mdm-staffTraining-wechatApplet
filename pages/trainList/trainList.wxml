@@ -1,0 +1,40 @@
+<view>
+  <!-- 搜索 -->
+  <view class='search'>
+    <input type="text" bindinput='formName'></input>
+    <text catchtap='searchVal'>搜索</text>
+  </view>
+
+  <!-- 卡片 -->
+  <block wx:for="{{list}}" wx:for-item="item">
+    <view class='card' catchtap='toDetail' data-id="{{item.id}}" data-typeid="{{item.typeId}}" data-title="{{item.name}}" data-detail="{{item.detail}}">
+      <view class='row title' >
+        <text>{{item.name}}</text>
+        <icon type='success' size="20" wx:for="{{trainList}}" wx:for-item="value" wx:if="{{item.id==value.id&&value.allProcess==100.0}}"></icon>
+        <icon type='warn' size="20" wx:for="{{trainList}}" wx:for-item="value" wx:if="{{item.id==value.id&&value.allProcess!=100.0}}"></icon>
+      </view>
+      <view class='row content'>
+        <view class="col rightLine">
+          <text>视频</text>
+          <view>
+            <text class="greenF" wx:for="{{trainList}}" wx:for-item="value" wx:if="{{item.id==value.id}}">{{value.allVideo}}</text>
+            <text> / {{item.detail.video.length}}</text>
+          </view>
+        </view>
+        <view class="col rightLine">
+          <text>文档</text>
+          <view>
+            <text class="greenF" wx:for="{{trainList}}" wx:for-item="value" wx:if="{{item.id==value.id}}">{{value.allFile}}</text>
+            <text> / {{item.detail.file.length}}</text>
+          </view>
+        </view>
+        <view class="col">
+          <text>进度</text>
+          <text class="greenF" wx:for="{{trainList}}" wx:for-item="value" wx:if="{{item.id==value.id}}">{{value.allProcess}} %</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+</view>

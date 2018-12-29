@@ -1,0 +1,7 @@
+<view style='margin-top:100rpx;'>
+<text bindtap='openPdf'>下载pdf</text>
+</view>
+
+<view style='margin-top:100rpx;'>
+<text>下载ppt</text>
+</view>
